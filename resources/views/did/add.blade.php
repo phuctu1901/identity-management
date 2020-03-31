@@ -96,6 +96,7 @@
                                     <div class="text-center">
                                         <button id="connection_check" class="btn btn-warning">Kiểm tra kết nối</button>
                                         <button id="issue_credential" class="btn btn-success">Cấp định danh</button>
+                                        <button id="check_credential" class="btn btn-info">Kiểm tra trạng thái</button>
                                     </div>
                                 </div>
                             </div>
@@ -124,6 +125,7 @@
     <script>
         $("#connection_check").prop("disabled", true);
         $("#issue_credential").prop("disabled", true);
+        $("#check_credential").prop("disabled", true);
         $("#btn-submit").prop("disabled", true);
 
 
@@ -175,15 +177,15 @@
                 {
                     toastr.success('Lấy thông tin thành công')
                     var data = data.data
-                    var inviationUrl = data.invitationUrl
-                    var connectionId = data.connectionId
+                    var inviationUrl = data.invitation_url
+                    var connectionId = data.connection_id
                     var qrcode = new QRCode(document.getElementById("qrcode"), {
                         text: inviationUrl,
-                        width: 320,
-                        height: 320,
+                        width:200,
+                        height: 200,
                         colorDark : "#000000",
                         colorLight : "#ffffff",
-                        correctLevel : QRCode.CorrectLevel.H
+                        correctLevel : QRCode.CorrectLevel.L
                     });
                     $("#connection_check").data('button-data', {connectionId:connectionId})
 
@@ -209,6 +211,9 @@
                 {
                     toastr.success('Lấy thông tin thành công')
                     console.log(data)
+                    $("#check_credential").data('button-data', {cred_ex_id: data.data.credential_exchange_id})
+                    $("#check_credential").prop("disabled", false);
+
                 },
                 error: function (err) {
                     console.log(err)
@@ -227,14 +232,42 @@
                 {
                     toastr.success('Lấy thông tin thành công')
                     var data = data.data
-                    if(data.state === 'Connected'){
+                    if(data.state === 'response'){
                         swal('Thành công', 'Đã kết nối đến người dân','success')
                         $("#issue_credential").prop("disabled", false);
                         // $("#connection_check").prop("disabled", false);
 
                     }
-                    else if (data.state === 'Invited'){
+                    else if (data.state === 'invitation'){
                         swal('Đang đợi kết nối', 'Vui lòng kết nối','info')
+                    }
+                    console.log(data)
+                },
+                error: function (err) {
+                    console.log(err)
+                    toastr.error('Lỗi truy vấn thông tin')
+
+                }
+            });
+        }
+
+        function getCredentialStatus(id){
+            $.ajax({
+                type: 'GET',
+                // data: {code: code},
+                url:"/api/credential/get/"+id,
+                success:function(data)
+                {
+                    toastr.success('Lấy thông tin thành công')
+                    var data = data.data
+                    if(data.state === 'credential_issued'){
+                        swal('Thành công', 'Người dân đã lưu chứng chỉ','success')
+                        // $("#issue_credential").prop("disabled", false);
+                        // $("#connection_check").prop("disabled", false);
+
+                    }
+                    else if (data.state === 'offer_sent'){
+                        swal('Đang đợi kết nối', 'Vui lòng lưu trên điện thoại','info')
                     }
                     console.log(data)
                 },
@@ -258,6 +291,14 @@
             var connectionId = $("#connection_check").data('button-data').connectionId
             var code = $("#input_code").val()
             issueCredential(connectionId, code)
+        })
+
+        $("#check_credential").click(function (event) {
+            event.preventDefault();
+            var cred_ex_id = $("#check_credential").data('button-data').cred_ex_id
+            // var code = $("#input_code").val()
+
+            getCredentialStatus(cred_ex_id)
         })
 
 

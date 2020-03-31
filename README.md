@@ -23,10 +23,19 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 ## Hướng dẫn sử dụng
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+```bash
+ngrok http 10000
+```
+Copy địa chỉ https sau khi ngrok và đổi ở trong file docker-composer.yaml
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Tiến hành khởi chạy `Aries Cloud Agent Python`
 
+```bash
+ngrok http 5000
+```
+Copy địa chỉ https và thay đổi ở trong file `.env` tại vị trí `ACA_PY_URL`
+
+Nếu xảy ra hiện tượng không sử dụng được `cred_def` đã tạo thì tiến hành tạo lại và thay thể `id` vừa tạo được vào vị trí `CRED_ID`
 ## Tính năng chính
 
 We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).

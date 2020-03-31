@@ -22,4 +22,6 @@ Route::post('/citizen/getbyid', 'CitizenController@getById');
 Route::get('/connection/create', 'DIDController@createConnection');
 Route::get('/connection/get/{id}', 'DIDController@getConnection');
 Route::post('/credential/issue', 'DIDController@issueCredential');
+Route::get('/credential/get/{id}', 'DIDController@getCredential');
+Route::post('/did/getDids', 'DIDController@getDids');
 
