@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class DashboardController extends Controller
+class EventController extends Controller
 {
-    function index()
+    function list()
     {
 //        $data = Bot::paginate(10);
-        return view('home.dashboard');
+        return view('home.events');
     }
 }

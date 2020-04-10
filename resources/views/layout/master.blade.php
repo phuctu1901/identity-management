@@ -11,7 +11,7 @@
     <title>Trang chủ | Hệ thống quản lý định danh số Thành phố Hà Nội</title>
 
     <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
-    <link rel="shortcut icon" href="/assets/images/favicon.ico">
+    <link rel="shortcut icon" href="/assets/images/favicon.png">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/global/css/bootstrap.min.css">
@@ -128,13 +128,13 @@
 {{--                    </li>--}}
                     <li class="site-menu-category">I. Tổng quan</li>
                     <li class="site-menu-item ">
-                        <a href="/bots/list">
+                        <a href="/dashboard">
                             <i class="site-menu-icon " aria-hidden="true"></i>
                             <span class="site-menu-title">1. Dashboard</span>
                         </a>
                     </li>
                     <li class="site-menu-item ">
-                        <a href="/bots/list">
+                        <a href="/events">
                             <i class="site-menu-icon" aria-hidden="true"></i>
                             <span class="site-menu-title">2. Các sự kiện</span>
                         </a>

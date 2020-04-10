@@ -32,29 +32,7 @@ class DIDController extends Controller
         }
     }
 
-    function createConnection(){
 
-        $api_url = $_ENV['ACA_PY_URL'];
-
-        $client = new \GuzzleHttp\Client();
-        $url = $api_url.'/connections/create-invitation';
-        $response = $client->request('POST',$url,  []);
-        return response()->json([
-            'error' => false,
-            'data'  => \GuzzleHttp\json_decode($response->getBody()->getContents()),
-        ], $response->getStatusCode());
-    }
-
-    function getConnection($id){
-        $client = new \GuzzleHttp\Client();
-        $api_url = $_ENV['ACA_PY_URL'];
-        $url = $api_url."/connections/".$id;
-        $response = $client->request('GET',$url,  []);
-        return response()->json([
-            'error' => false,
-            'data'  => \GuzzleHttp\json_decode($response->getBody()->getContents()),
-        ], $response->getStatusCode());
-    }
 
     function getCredential($id){
         $client = new \GuzzleHttp\Client();
@@ -122,14 +100,14 @@ class DIDController extends Controller
                         "name": "address",
                         "value": "'.$data->address.'"
                       },{
-                        "name": "id_number",
+                        "name": "id",
                         "value": "'.$data->code.'"
                       }
                     ]
                   },
                   "cred_def_id": "'.$cred_def_id.'",
                   "connection_id": "'.$connectionId.'",
-                  "comment": "Cấp phát định danh điện tử cho công dân"
+                  "comment": "Null"
                 }';
 
 
@@ -140,8 +118,9 @@ class DIDController extends Controller
             'json'=>json_decode($json_string, true)
         ]);
 
-        $data_response = \GuzzleHttp\json_decode($response->getBody()->getContents());
-//        dd(gettype($data_response));
+//        dd($response->getBody()->getContents());
+        $data_response = \GuzzleHttp\json_decode($response->getBody());
+//        dd($data_response);
         $data_array=[
             "code"=>$code,
             "isIssued"=>1,
@@ -155,7 +134,7 @@ class DIDController extends Controller
 
         return response()->json([
             'error' => false,
-            'data'  => \GuzzleHttp\json_decode($response->getBody()->getContents()),
+            'data'  => \GuzzleHttp\json_decode($response->getBody()),
         ], $response->getStatusCode());
     }
 

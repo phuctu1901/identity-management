@@ -1,6 +1,6 @@
-<table class="table table-hover table-bordered table-striped toggle-arrow-tiny"
+<table class="card-block table table-hover table-bordered table-striped toggle-arrow-tiny"
        id="exampleFooAccordion"
-       data-sorting="true" data-show-toggle="true" data-toggle-column="last">
+       data-sorting="true" data-show-toggle="true" data-toggle-column="last" style="background: white">
     <thead>
     <tr>
         <th data-name="title">ID</th>

@@ -16,4 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'DashboardController@index');
 Route::get('/did/add', 'DIDController@add');
 Route::get('/did/list', 'DIDController@list');
-Route::post('/test/json', 'Services\ACA_Controller@issueCredential');
+
+
+Route::get('/connection/list', 'ConnectionController@list');
+Route::get('/connection/detail/{id}', 'ConnectionController@detail');
+
+Route::get('/dashboard', 'DashboardController@index');
+Route::get('/events', 'EventController@list');
