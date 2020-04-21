@@ -29,7 +29,7 @@
                 <div class="col-12">
                     <div  class="card card-shadow card-md" style="margin-top: 30px;">
                         <div class="card-header card-header-transparent pb-15">
-                            <p class="font-size-14 blue-grey-700 mb-0 text-uppercase">Thông tin định danh</p>
+                            <p class="font-size-20 black mb-0 text-uppercase">Thông tin định danh</p>
                         </div>
                         <div class="card-block px-90 col-12">
                             <div class="row">
@@ -114,6 +114,19 @@
     </div>
 @endsection
 @section('scripts-content')
+
+    <style>
+        body{
+            color:unset!important;
+        }
+        .form-control{
+            color: black;
+
+            font-weight: 400;
+
+            font-size: 18px;
+        }
+    </style>
     <script src="/global/vendor/footable/footable.min.js"></script>
     <script src="/assets/examples/js/dashboard/analytics.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
@@ -181,8 +194,8 @@
                     var connectionId = data.connection_id
                     var qrcode = new QRCode(document.getElementById("qrcode"), {
                         text: inviationUrl,
-                        width:200,
-                        height: 200,
+                        width:320,
+                        height: 320,
                         colorDark : "#000000",
                         colorLight : "#ffffff",
                         correctLevel : QRCode.CorrectLevel.L
