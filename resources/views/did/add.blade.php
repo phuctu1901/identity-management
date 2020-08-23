@@ -192,6 +192,7 @@
                     var data = data.data
                     var inviationUrl = data.invitation_url
                     var connectionId = data.connection_id
+                    document.getElementById("qrcode").innerHTML = "";
                     var qrcode = new QRCode(document.getElementById("qrcode"), {
                         text: inviationUrl,
                         width:320,

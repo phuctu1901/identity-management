@@ -109,8 +109,7 @@ class DIDController extends Controller
                   "connection_id": "'.$connectionId.'",
                   "comment": "Null"
                 }';
-
-
+//        return ['json'=>json_decode($json_string, true)];
         $client = new \GuzzleHttp\Client();
 
         $url = $api_url.'/issue-credential/send-offer';
