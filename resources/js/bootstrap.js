@@ -26,3 +26,12 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+import Echo from "laravel-echo"
+window.io = require('socket.io-client');
+
+window.Echo = new Echo({
+    broadcaster: 'socket.io',
+    // host: window.location.hostname + ':6001' // this is laravel-echo-server host
+    host: '192.168.11.1:6001' // this is laravel-echo-server host
+});

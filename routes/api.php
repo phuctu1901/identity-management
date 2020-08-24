@@ -31,3 +31,5 @@ Route::get('/connection/create', 'ConnectionController@createConnection');
 Route::get('/connection/get/{id}', 'ConnectionController@getConnection');
 Route::get('/connection/getConnections', 'ConnectionController@getConnections');
 
+Route::get('/did/connected/{id}', 'API\DID\AddController@connected');
+
