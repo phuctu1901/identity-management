@@ -92,7 +92,7 @@
                                 <div class="form-group d-flex justify-content-center">
                                     <div id="qrcode"></div>
                                 </div>
-                                <div class="d-flex justify-content-center">
+                                <div class="d-flex justify-content-center" style="display: none!important;">
                                     <div class="text-center">
                                         <button id="connection_check" class="btn btn-warning">Kiểm tra kết nối</button>
                                         <button id="issue_credential" class="btn btn-success">Cấp định danh</button>
@@ -133,6 +133,8 @@
     <script src="/assets/js/qrcode.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.js"></script>
+    <script src="{{ asset('/js/app.js') }}"></script>
+
     <!-- Optional: include a polyfill for ES6 Promises for IE11 -->
 {{--    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>--}}
     <script>
@@ -192,6 +194,7 @@
                     var data = data.data
                     var inviationUrl = data.invitation_url
                     var connectionId = data.connection_id
+                    console.log(connectionId)
                     document.getElementById("qrcode").innerHTML = "";
                     var qrcode = new QRCode(document.getElementById("qrcode"), {
                         text: inviationUrl,
@@ -204,6 +207,13 @@
                     $("#connection_check").data('button-data', {connectionId:connectionId})
 
                     $("#connection_check").prop("disabled", false);
+
+                    Echo.channel('quanlydinhdanh_channel_add_did_'+connectionId)
+                        .listen('.App\\Events\\DID\\ConnectedEvent', e => {
+                            connected_event(connectionId)
+                            // console.log('hello world')
+                            // swal('Thành công', 'Người dùng đã chấp nhận kết nối','success')
+                        })
 
                 },
                 error: function (err) {
@@ -235,6 +245,15 @@
 
                 }
             });
+        }
+
+        function connected_event(connectionId){
+            toastr.success('Người dùng đã chấp nhận kết nối')
+            toastr.info('Đang itến hành gởi thẻ định danh')
+            var connectionId = $("#connection_check").data('button-data').connectionId
+            var code = $("#input_code").val()
+            issueCredential(connectionId, code)
+
         }
 
         function getConnection(id){
@@ -314,6 +333,8 @@
 
             getCredentialStatus(cred_ex_id)
         })
+
+
 
 
     </script>
