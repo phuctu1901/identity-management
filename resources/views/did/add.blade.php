@@ -3,7 +3,7 @@
 @section('header-content')
     <link rel="stylesheet" href="/global/vendor/footable/footable.core.css">
     <link rel="stylesheet" href="/assets/examples/css/dashboard/analytics.css">
-    <script src="https://js.pusher.com/5.0/pusher.min.js"></script>
+{{--    <script src="https://js.pusher.com/5.0/pusher.min.js"></script>--}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.css">
 
@@ -88,7 +88,7 @@
 
                             </div>
 
-                            <div class="col-md-12 col-lg-5">
+                            <div class="col-md-6 col-lg-3">
                                 <div class="form-group d-flex justify-content-center">
                                     <div id="qrcode"></div>
                                 </div>
@@ -100,7 +100,12 @@
                                     </div>
                                 </div>
                             </div>
+                                <div class="col-md-6 col-lg-3" id="logs-area">
+
+
+                                </div>
                             </div>
+
 
                         </div>
                     </div>
@@ -196,6 +201,7 @@
                     var connectionId = data.connection_id
                     console.log(connectionId)
                     document.getElementById("qrcode").innerHTML = "";
+                    $('#logs-area').html('');
                     var qrcode = new QRCode(document.getElementById("qrcode"), {
                         text: inviationUrl,
                         width:320,
@@ -206,13 +212,21 @@
                     });
                     $("#connection_check").data('button-data', {connectionId:connectionId})
 
-                    $("#connection_check").prop("disabled", false);
+                    // $("#connection_check").prop("disabled", false);
 
                     Echo.channel('quanlydinhdanh_channel_add_did_'+connectionId)
                         .listen('.App\\Events\\DID\\ConnectedEvent', e => {
                             connected_event(connectionId)
-                            console.log('hello world')
                             // swal('Thành công', 'Người dùng đã chấp nhận kết nối','success')
+                        })
+
+                    Echo.channel('quanlydinhdanh_channel_add_did_'+connectionId)
+                        .listen('.App\\Events\\DID\\IssuedEvent', e => {
+                            // connected_event(connectionId)
+                            // console.log('hello world')
+                            swal('Thành công', 'Người dùng đã lưu chứng chỉ số','success')
+                            $('#logs-area').append(`<div class="alert alert-success" role="alert">
+                                       Đã cấp định danh             </div>`);
                         })
 
                 },
@@ -249,90 +263,95 @@
 
         function connected_event(connectionId){
             toastr.success('Người dùng đã chấp nhận kết nối')
-            toastr.info('Đang itến hành gởi thẻ định danh')
+            $('#logs-area').append(`<div class="alert alert-success" role="alert">
+                                       Người dùng đã kết nối
+                                    </div>`);
             var connectionId = $("#connection_check").data('button-data').connectionId
             var code = $("#input_code").val()
             issueCredential(connectionId, code)
-
+            toastr.info('Đang tiến hành gởi thẻ định danh')
+            $('#logs-area').append(`<div class="alert alert-info" role="alert">
+                                       Đang gởi yêu cầu đến người dùng
+                                    </div>`);
         }
 
-        function getConnection(id){
-            $.ajax({
-                type: 'GET',
-                // data: {code: code},
-                url:"/api/connection/get/"+id,
-                success:function(data)
-                {
-                    toastr.success('Lấy thông tin thành công')
-                    var data = data.data
-                    if(data.state === 'response'){
-                        swal('Thành công', 'Đã kết nối đến người dân','success')
-                        $("#issue_credential").prop("disabled", false);
-                        // $("#connection_check").prop("disabled", false);
-
-                    }
-                    else if (data.state === 'invitation'){
-                        swal('Đang đợi kết nối', 'Vui lòng kết nối','info')
-                    }
-                    console.log(data)
-                },
-                error: function (err) {
-                    console.log(err)
-                    toastr.error('Lỗi truy vấn thông tin')
-
-                }
-            });
-        }
-
-        function getCredentialStatus(id){
-            $.ajax({
-                type: 'GET',
-                // data: {code: code},
-                url:"/api/credential/get/"+id,
-                success:function(data)
-                {
-                    toastr.success('Lấy thông tin thành công')
-                    var data = data.data
-                    if(data.state === 'credential_issued'){
-                        swal('Thành công', 'Người dân đã lưu chứng chỉ','success')
-                        // $("#issue_credential").prop("disabled", false);
-                        // $("#connection_check").prop("disabled", false);
-
-                    }
-                    else if (data.state === 'offer_sent'){
-                        swal('Đang đợi kết nối', 'Vui lòng lưu trên điện thoại','info')
-                    }
-                    console.log(data)
-                },
-                error: function (err) {
-                    console.log(err)
-                    toastr.error('Lỗi truy vấn thông tin')
-
-                }
-            });
-        }
-
-
-        $("#connection_check").click(function (event) {
-            event.preventDefault();
-            var connectionId = $("#connection_check").data('button-data').connectionId
-            getConnection(connectionId);
-        })
-
-        $("#issue_credential").click(function (event) {
-            event.preventDefault();
-            var connectionId = $("#connection_check").data('button-data').connectionId
-            var code = $("#input_code").val()
-            issueCredential(connectionId, code)
-        })
-
-        $("#check_credential").click(function (event) {
-            event.preventDefault();
-            var cred_ex_id = $("#check_credential").data('button-data').cred_ex_id
-            // var code = $("#input_code").val()
-
-            getCredentialStatus(cred_ex_id)
-        })
+        // function getConnection(id){
+        //     $.ajax({
+        //         type: 'GET',
+        //         // data: {code: code},
+        //         url:"/api/connection/get/"+id,
+        //         success:function(data)
+        //         {
+        //             toastr.success('Lấy thông tin thành công')
+        //             var data = data.data
+        //             if(data.state === 'response'){
+        //                 swal('Thành công', 'Đã kết nối đến người dân','success')
+        //                 $("#issue_credential").prop("disabled", false);
+        //                 // $("#connection_check").prop("disabled", false);
+        //
+        //             }
+        //             else if (data.state === 'invitation'){
+        //                 swal('Đang đợi kết nối', 'Vui lòng kết nối','info')
+        //             }
+        //             console.log(data)
+        //         },
+        //         error: function (err) {
+        //             console.log(err)
+        //             toastr.error('Lỗi truy vấn thông tin')
+        //
+        //         }
+        //     });
+        // }
+        //
+        // function getCredentialStatus(id){
+        //     $.ajax({
+        //         type: 'GET',
+        //         // data: {code: code},
+        //         url:"/api/credential/get/"+id,
+        //         success:function(data)
+        //         {
+        //             toastr.success('Lấy thông tin thành công')
+        //             var data = data.data
+        //             if(data.state === 'credential_issued'){
+        //                 swal('Thành công', 'Người dân đã lưu chứng chỉ','success')
+        //                 // $("#issue_credential").prop("disabled", false);
+        //                 // $("#connection_check").prop("disabled", false);
+        //
+        //             }
+        //             else if (data.state === 'offer_sent'){
+        //                 swal('Đang đợi kết nối', 'Vui lòng lưu trên điện thoại','info')
+        //             }
+        //             console.log(data)
+        //         },
+        //         error: function (err) {
+        //             console.log(err)
+        //             toastr.error('Lỗi truy vấn thông tin')
+        //
+        //         }
+        //     });
+        // }
+        //
+        //
+        // $("#connection_check").click(function (event) {
+        //     event.preventDefault();
+        //     var connectionId = $("#connection_check").data('button-data').connectionId
+        //     getConnection(connectionId);
+        // })
+        //
+        // $("#issue_credential").click(function (event) {
+        //     event.preventDefault();
+        //     var connectionId = $("#connection_check").data('button-data').connectionId
+        //     var code = $("#input_code").val()
+        //     issueCredential(connectionId, code)
+        // })
+        //
+        // $("#check_credential").click(function (event) {
+        //     event.preventDefault();
+        //     var cred_ex_id = $("#check_credential").data('button-data').cred_ex_id
+        //     // var code = $("#input_code").val()
+        //
+        //     getCredentialStatus(cred_ex_id)
+        // })
 
 
 
