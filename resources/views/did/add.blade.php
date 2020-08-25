@@ -211,7 +211,7 @@
                     Echo.channel('quanlydinhdanh_channel_add_did_'+connectionId)
                         .listen('.App\\Events\\DID\\ConnectedEvent', e => {
                             connected_event(connectionId)
-                            // console.log('hello world')
+                            console.log('hello world')
                             // swal('Thành công', 'Người dùng đã chấp nhận kết nối','success')
                         })
 
