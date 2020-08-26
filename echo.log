@@ -1,0 +1,13 @@
+
+L A R A V E L  E C H O  S E R V E R
+
+version 1.6.2
+
+Starting server...
+
+✔  Running at localhost on port 6001
+✔  Listening for http events...
+✔  Listening for redis events...
+
+Server ready!
+
