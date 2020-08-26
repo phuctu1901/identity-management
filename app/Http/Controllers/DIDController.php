@@ -19,7 +19,7 @@ class DIDController extends Controller
 
     function list()
     {
-        $data = DID::paginate(10);
+        $data = DID::paginate(20);
         return view('did.list', compact('data'));
     }
 
@@ -27,7 +27,7 @@ class DIDController extends Controller
     {
         if($request->ajax())
         {
-            $data = DID::paginate(10);
+            $data = DID::paginate(20);
             return view('did.table', compact('data'))->render();
         }
     }

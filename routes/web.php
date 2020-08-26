@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'DashboardController@index');
+Route::get('/', 'DashboardController@index')->middleware('auth');;
 Route::get('/did/add', 'DIDController@add');
 Route::get('/did/list', 'DIDController@list');
 
@@ -22,4 +22,21 @@ Route::get('/connection/list', 'ConnectionController@list');
 Route::get('/connection/detail/{id}', 'ConnectionController@detail');
 
 Route::get('/dashboard', 'DashboardController@index');
-Route::get('/events', 'EventController@list');
+Route::get('/events', 'EventController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group([], function () {
+    Route::get('/role','RoleController@index');
+    Route::get('/role/add','RoleController@add');
+    Route::post('/role/delete','RoleController@delete');
+    Route::get('/role/edit/{id}','RoleController@edit');
+    Route::post('/role/editRequest', 'RoleController@editRequest');
+    Route::post('/role/addRequest','RoleController@addRequest');
+
+    Route::get('/permission/add','PermissionController@add');
+    Route::post('/permission/addRequest','PermissionController@addRequest');
+});
+

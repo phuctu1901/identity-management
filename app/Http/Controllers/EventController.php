@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class EventController extends Controller
 {
-    function list()
+    function index()
     {
 //        $data = Bot::paginate(10);
         return view('home.events');
