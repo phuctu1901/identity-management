@@ -9,7 +9,7 @@ class ConnectionController extends Controller
 {
     function list()
     {
-        $data = Connection::paginate(10);
+        $data = Connection::paginate(20);
         return view('connection.list', compact('data'));
     }
 
@@ -17,7 +17,7 @@ class ConnectionController extends Controller
     {
         if($request->ajax())
         {
-            $data = Connection::paginate(10);
+            $data = Connection::paginate(20);
             return view('connection.table', compact('data'))->render();
         }
     }

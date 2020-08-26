@@ -72,13 +72,9 @@
         </button>
         <div class="navbar-brand navbar-brand-center site-gridmenu-toggle" data-toggle="gridmenu">
             <img class="navbar-brand-logo" src="/assets/images/Hanoi_Logo.png" title="Hệ thống Quản lý định danh Thành phố Hà Nội">
-            <span class="navbar-brand-text hidden-xs-down">Hanoi DID System</span>
+            <span class="navbar-brand-text">Hanoi DID System</span>
         </div>
-        <button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-search"
-                data-toggle="collapse">
-            <span class="sr-only">Toggle Search</span>
-            <i class="icon wb-search" aria-hidden="true"></i>
-        </button>
+
     </div>
 
     <div class="navbar-container container-fluid">
@@ -119,13 +115,6 @@
         <div>
             <div>
                 <ul class="site-menu" data-plugin="menu">
-{{--                    <li class="site-menu-category">General</li>--}}
-{{--                    <li class="site-menu-item  active">--}}
-{{--                        <a href="/">--}}
-{{--                            <i class="site-menu-icon wb-dashboard" aria-hidden="true"></i>--}}
-{{--                            <span class="site-menu-title">Dashboard</span>--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
                     <li class="site-menu-category">I. Tổng quan</li>
                     <li class="site-menu-item ">
                         <a href="/dashboard">
@@ -166,20 +155,6 @@
                         </a>
                     </li>
 
-
-{{--                    <li class="site-menu-category">REVENUE</li>--}}
-{{--                    <li class="site-menu-item">--}}
-{{--                        <a href="/revenue">--}}
-{{--                            <i class="site-menu-icon wb-eye" aria-hidden="true"></i>--}}
-{{--                            <span class="site-menu-title ">Overview</span>--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
-{{--                    <li class="site-menu-item">--}}
-{{--                        <a href="javascript:void(0)">--}}
-{{--                            <i class="site-menu-icon fas fa-info" aria-hidden="true"></i>--}}
-{{--                            <span class="site-menu-title ">Detail</span>--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
                     <li class="site-menu-category">III. Quản lý người dùng</li>
 
                     <li class="site-menu-item">
@@ -189,7 +164,7 @@
                         </a>
                     </li>
                     <li class="site-menu-item">
-                        <a href="/users/role">
+                        <a href="/role">
                             <i class="site-menu-icon" aria-hidden="true"></i>
                             <span class="site-menu-title">2. Phân quyền</span>
                         </a>
@@ -203,13 +178,6 @@
 
 
                     <li class="site-menu-category">IV. Quản lý mẫu</li>
-
-{{--                    <li class="site-menu-item">--}}
-{{--                        <a href="/schema/all">--}}
-{{--                            <i class="site-menu-icon" aria-hidden="true"></i>--}}
-{{--                            <span class="site-menu-title">Schema</span>--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
                     <li class="site-menu-item">
                         <a href="/claim/all">
                             <i class="site-menu-icon" aria-hidden="true"></i>
