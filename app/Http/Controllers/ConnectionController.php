@@ -81,4 +81,15 @@ class ConnectionController extends Controller
             'data'  => \GuzzleHttp\json_decode($response->getBody()),
         ], $response->getStatusCode());
     }
+
+    function detail($id){
+        $client = new \GuzzleHttp\Client();
+        $api_url = $_ENV['ACA_PY_URL'];
+        $url = $api_url."/connections/".$id;
+        $response = $client->request('GET',$url,  []);
+
+
+        $data_response = \GuzzleHttp\json_decode($response->getBody(), true);
+        return $data_response;
+    }
 }

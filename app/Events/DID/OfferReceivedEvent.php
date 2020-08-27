@@ -10,17 +10,22 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class IssuedEvent implements ShouldBroadcast
+class OfferReceivedEvent implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-   public $connection_id;
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct(string $connection_id)
+    public $connection_id;
+    /**
+     * Create a new event instance.
+     *
+     * @return void
+     */
+    public function __construct($connection_id)
     {
         $this->connection_id = $connection_id;
     }

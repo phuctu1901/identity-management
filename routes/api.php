@@ -31,6 +31,11 @@ Route::get('/connection/create', 'ConnectionController@createConnection');
 Route::get('/connection/get/{id}', 'ConnectionController@getConnection');
 Route::get('/connection/getConnections', 'ConnectionController@getConnections');
 
-Route::get('/did/connected/{id}', 'API\DID\AddController@connected');
-Route::get('/did/issued/{id}', 'API\DID\AddController@issued');
+Route::get('/did/connected/{id}', 'API\DID\AddController@responsedConnection');
+Route::get('/did/created_connect_invitation/{id}', 'API\DID\AddController@createdConnection');
+
+Route::get('/did/credential_issued/{id}', 'API\DID\AddController@issuedCredential');
+Route::get('/did/request_received/{id}', 'API\DID\AddController@receivedRequest');
+Route::get('/did/offer_sent/{id}', 'API\DID\AddController@sentOffer');
+
 

@@ -10,8 +10,7 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-
-class ConnectedEvent implements ShouldBroadcast
+class ConnectionResponsedEvent  implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
     public $connection_id;
@@ -31,6 +30,7 @@ class ConnectedEvent implements ShouldBroadcast
      *
      * @return \Illuminate\Broadcasting\Channel|array
      */
+
     public function broadcastOn()
     {
         return new Channel('add_did_'.$this->connection_id);
