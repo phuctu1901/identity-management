@@ -1,0 +1,14 @@
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/node_modules\n/public/hot\n/public/storage\n/storage/*.key\n/vendor\n.env\n.env.backup\n.phpunit.result.cache\nHomestead.json\nHomestead.yaml\nnpm-debug.log\nyarn-error.log\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .gitignore	(revision 6dd5f1f5f8259ece8f29aa7265eadc322779f9cd)
++++ .gitignore	(date 1598429940963)
+@@ -10,3 +10,4 @@
+ Homestead.yaml
+ npm-debug.log
+ yarn-error.log
++/resources/js/bootstrap.js

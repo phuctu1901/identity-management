@@ -138,6 +138,10 @@ class DIDController extends Controller
     }
 
 
-
+    public function detail($uuid){
+        $info = DID::Where('uuid', $uuid)->firstOrFail();
+        $pii = Citizen::Where('code', $info->code)->firstOrFail();
+        return view('did.detail', ['info'=>$info,'pii'=>$pii]);
+    }
 
 }

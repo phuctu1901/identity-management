@@ -12,10 +12,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
 
-Route::get('/', 'DashboardController@index')->middleware('auth');;
+Route::get('/', 'DashboardController@index')->middleware('auth');
 Route::get('/did/add', 'DIDController@add');
 Route::get('/did/list', 'DIDController@list');
+Route::get('/did/detail/{code}', 'DIDController@detail');
 
 
 Route::get('/connection/list', 'ConnectionController@list');
@@ -24,9 +26,8 @@ Route::get('/connection/detail/{id}', 'ConnectionController@detail');
 Route::get('/dashboard', 'DashboardController@index');
 Route::get('/events', 'EventController@index');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+//
+//Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group([], function () {
     Route::get('/role','RoleController@index');
