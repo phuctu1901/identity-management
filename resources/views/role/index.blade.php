@@ -5,24 +5,18 @@
 
 
 @section('header-content')
-    <link rel="stylesheet" href="/assets/examples/css/dashboard/analytics.css">
-    <meta name="csrf-token" value="{{ csrf_token() }}">
-    <!-- <link href="{{ mix('css/app.css') }}" rel="stylesheet"> -->
-    <link rel="stylesheet" type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.css">
-    {{--<style type="text/css" href=""></style>--}}
+    <link rel="stylesheet" href="/assets/css/app.css">
+    {{--    <link rel="stylesheet" href="/assets/css/sitesite.min.css">--}}
+    <link rel="stylesheet" href="/assets/css/site.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/fonts/feather/style.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/fonts/simple-line-icons/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
 @show
 @section('page')
     <div class="page">
         <div class="page-header">
             <h1 class="page-title">TỔNG QUAN</h1>
         </div>
-        <!-- <div id="app">
-            <example-component></example-component>
-        </div> -->
-
-        <script src="{{ mix('js/app.js') }}"></script>
-        <!-- Page Content -->
         <div class="page-content container-fluid">
                 <div class="row">
                     <div class="col-md-12 ">
@@ -50,6 +44,7 @@
                     </div>
                     <div class="col-md-12">
                         <div class="card">
+
                             <div class="card-header">
                                 <h4 class="card-title" style="display:inline-block;">Quản lý loại tài khoản</h4>
                                 <a type="button" name="add" id="add" class="btn btn-success pull-right"
@@ -227,14 +222,14 @@
         });
     </script>
 
-    <style>
-        .card-header{
-            background-color: #3e8ef7;
-        }
-        .card-title{
-            color: white;
-            font-weight: 1.2px;
-        }
-    </style>
+{{--    <style>--}}
+{{--        .card-header{--}}
+{{--            background-color: #3e8ef7;--}}
+{{--        }--}}
+{{--        .card-title{--}}
+{{--            color: white;--}}
+{{--            font-weight: 1.2px;--}}
+{{--        }--}}
+{{--    </style>--}}
 
 @show

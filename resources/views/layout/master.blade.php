@@ -16,7 +16,9 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/global/css/bootstrap.min.css">
     <link rel="stylesheet" href="/global/css/bootstrap-extend.min.css">
-    <link rel="stylesheet" href="/assets/css/site.min.css">
+{{--    <link rel="stylesheet" href="/assets/css/site.min.css">--}}
+
+
 
     <!-- Plugins -->
     <link rel="stylesheet" href="/global/vendor/animsition/animsition.css">
@@ -28,6 +30,16 @@
 {{--    <link rel="stylesheet" href="/global/vendor/morris/morris.css">--}}
 {{--    <link rel="stylesheet" href="/global/vendor/chartist/chartist.css">--}}
     <link rel="stylesheet" href="/global/vendor/chartist-plugin-tooltip/chartist-plugin-tooltip.css">
+
+    <link rel="stylesheet" href="/assets/css/app.css">
+    {{--    <link rel="stylesheet" href="/assets/css/sitesite.min.css">--}}
+    <link rel="stylesheet" href="/assets/css/site.min.css">
+    <meta name="csrf-token" value="{{ csrf_token() }}">
+<!-- <link href="{{ mix('css/app.css') }}" rel="stylesheet"> -->
+    {{--    <link rel="stylesheet" type="text/css" href="/assets/fonts/font-awesome/css/font-awesome.min.css">--}}
+    <link rel="stylesheet" type="text/css" href="/assets/fonts/feather/style.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/fonts/simple-line-icons/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
 @section('header-content')
 @show
 
@@ -331,7 +343,7 @@
                     <li class="site-menu-item ">
                         <a href="/dashboard">
                             <i class="site-menu-icon " aria-hidden="true"></i>
-                            <span class="site-menu-title">1. Dashboard</span>
+                            <span class="site-menu-title">1. Tổng quan</span>
                         </a>
                     </li>
                     <li class="site-menu-item ">
@@ -370,7 +382,7 @@
                     <li class="site-menu-category">III. Quản lý người dùng</li>
 
                     <li class="site-menu-item">
-                        <a href="/users/all">
+                        <a href="/user">
                             <i class="site-menu-icon" aria-hidden="true"></i>
                             <span class="site-menu-title">1. Danh sách người dùng</span>
                         </a>
@@ -381,14 +393,6 @@
                             <span class="site-menu-title">2. Phân quyền</span>
                         </a>
                     </li>
-                    <li class="site-menu-item">
-                        <a href="/users/online">
-                            <i class="site-menu-icon" aria-hidden="true"></i>
-                            <span class="site-menu-title">3. Đang trực tuyến</span>
-                        </a>
-                    </li>
-
-
                     <li class="site-menu-category">IV. Quản lý mẫu</li>
                     <li class="site-menu-item">
                         <a href="/claim/all">

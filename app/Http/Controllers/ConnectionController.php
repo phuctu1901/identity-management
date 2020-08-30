@@ -83,13 +83,14 @@ class ConnectionController extends Controller
     }
 
     function detail($id){
-        $client = new \GuzzleHttp\Client();
-        $api_url = $_ENV['ACA_PY_URL'];
-        $url = $api_url."/connections/".$id;
-        $response = $client->request('GET',$url,  []);
+        try {
+            $data = Connection::Where('id',$id)->firstOrFail();
+            return view('connection.detail',['data'=>$data, 'error'=>false]);
+        }catch (Throwable $e){
 
+        }
 
-        $data_response = \GuzzleHttp\json_decode($response->getBody(), true);
-        return $data_response;
+        return view('connection.detail',['error'=>true]);
+
     }
 }

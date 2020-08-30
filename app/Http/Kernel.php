@@ -36,6 +36,10 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+//           Check User Online
+            \App\Http\Middleware\LastUserActivity::class,
+//            Force logout
+            \App\Http\Middleware\LogoutUsers::class, // <= Here
         ],
 
         'api' => [

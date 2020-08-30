@@ -2,6 +2,7 @@
 
 namespace App\Events\DID;
 
+use App\Http\Controllers\ConnectionController;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PresenceChannel;
@@ -33,6 +34,7 @@ class ConnectionResponsedEvent  implements ShouldBroadcast
 
     public function broadcastOn()
     {
+
         return new Channel('add_did_'.$this->connection_id);
     }
 }
