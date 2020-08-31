@@ -199,8 +199,6 @@
                     var inviationUrl = data.invitation_url
                     var connectionId = data.connection_id
                     console.log(connectionId)
-                    document.getElementById("qrcode").innerHTML = "";
-                    $('#logs-area').html('');
                     var qrcode = new QRCode(document.getElementById("qrcode"), {
                         text: inviationUrl,
                         width:320,
@@ -212,6 +210,7 @@
                     $("#connection_check").data('button-data', {connectionId:connectionId})
 
                     // $("#connection_check").prop("disabled", false);
+                    console.log("khoi tao lang nghe su kien tao ket noi");
 
                     Echo.channel('quanlydinhdanh_channel_add_did_'+connectionId)
                         .listen('.App\\Events\\DID\\ConnectionCreatedEvent', e => {
