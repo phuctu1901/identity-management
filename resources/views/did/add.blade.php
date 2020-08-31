@@ -188,6 +188,9 @@
             toastr.info('Đang lấy thông tin')
             const  code = $("#input_code").val()
 
+            document.getElementById("qrcode").innerHTML = "";
+            $('#logs-area').html('');
+
             $.ajax({
                 type: 'GET',
                 // data: {code: code},
@@ -212,12 +215,12 @@
                     // $("#connection_check").prop("disabled", false);
                     console.log("khoi tao lang nghe su kien tao ket noi");
 
-                    Echo.channel('quanlydinhdanh_channel_add_did_'+connectionId)
-                        .listen('.App\\Events\\DID\\ConnectionCreatedEvent', e => {
+                    // Echo.channel('quanlydinhdanh_channel_add_did_'+connectionId)
+                    //     .listen('.App\\Events\\DID\\ConnectionCreatedEvent', e => {
                             $('#logs-area').append(`<div class="alert alert-info" role="alert">
                                        1. Khởi tạo kết nối
                                     </div>`);
-                        })
+                        // })
 
                     Echo.channel('quanlydinhdanh_channel_add_did_'+connectionId)
                         .listen('.App\\Events\\DID\\ConnectionResponsedEvent', e => {
