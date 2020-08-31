@@ -2,7 +2,7 @@
 @section('header-content')
     <link rel="stylesheet" href="/assets/css/app.css">
     {{--    <link rel="stylesheet" href="/assets/css/sitesite.min.css">--}}
-    <link rel="stylesheet" href="/assets/css/site.min.css">
+
     <meta name="csrf-token" value="{{ csrf_token() }}">
     <!-- <link href="{{ mix('css/app.css') }}" rel="stylesheet"> -->
 {{--    <link rel="stylesheet" type="text/css" href="/assets/fonts/font-awesome/css/font-awesome.min.css">--}}

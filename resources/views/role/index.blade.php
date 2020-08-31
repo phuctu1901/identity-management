@@ -7,7 +7,6 @@
 @section('header-content')
     <link rel="stylesheet" href="/assets/css/app.css">
     {{--    <link rel="stylesheet" href="/assets/css/sitesite.min.css">--}}
-    <link rel="stylesheet" href="/assets/css/site.min.css">
     <link rel="stylesheet" type="text/css" href="/assets/fonts/feather/style.min.css">
     <link rel="stylesheet" type="text/css" href="/assets/fonts/simple-line-icons/style.css">
     <link rel="stylesheet" type="text/css" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
@@ -186,7 +185,6 @@
     </div>
 @endsection
 @section('scripts-content')
-    <script src="/assets/examples/js/dashboard/analytics.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js"
             type="text/javascript"></script>

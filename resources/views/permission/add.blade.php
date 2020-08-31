@@ -5,7 +5,6 @@
 
 
 @section('header-content')
-    <link rel="stylesheet" href="/assets/examples/css/dashboard/analytics.css">
     <meta name="csrf-token" value="{{ csrf_token() }}">
     <!-- <link href="{{ mix('css/app.css') }}" rel="stylesheet"> -->
     <link rel="stylesheet" type="text/css"

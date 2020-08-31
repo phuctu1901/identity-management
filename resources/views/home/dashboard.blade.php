@@ -1,7 +1,6 @@
 @extends('layout.master')
 
 @section('header-content')
-    <link rel="stylesheet" href="/assets/css/site.min.css">
 
     <meta name="csrf-token" value="{{ csrf_token() }}">
     <!-- <link href="{{ mix('css/app.css') }}" rel="stylesheet"> -->

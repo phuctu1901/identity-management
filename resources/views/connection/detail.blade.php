@@ -1,7 +1,7 @@
 @extends('layout.master')
 
 @section('header-content')
-    <link rel="stylesheet" href="/assets/css/site.min.css">
+
 @show
 
 

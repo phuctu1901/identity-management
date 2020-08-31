@@ -5,7 +5,8 @@
 
 
 @section('header-content')
-    <link rel="stylesheet" href="/assets/examples/css/dashboard/analytics.css">
+    <link rel="stylesheet" href="/assets/css/app.css">
+
     <meta name="csrf-token" value="{{ csrf_token() }}">
     <!-- <link href="{{ mix('css/app.css') }}" rel="stylesheet"> -->
     <link rel="stylesheet" type="text/css"
@@ -197,7 +198,6 @@
     </style>
 @endsection
 @section('scripts-content')
-    <script src="/assets/examples/js/dashboard/analytics.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js"
             type="text/javascript"></script>

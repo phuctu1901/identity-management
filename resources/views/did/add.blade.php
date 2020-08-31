@@ -1,11 +1,10 @@
 @extends('layout.master')
 
 @section('header-content')
-    <link rel="stylesheet" href="/global/vendor/footable/footable.core.css">
-    <link rel="stylesheet" href="/assets/examples/css/dashboard/analytics.css">
 {{--    <script src="https://js.pusher.com/5.0/pusher.min.js"></script>--}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.css">
+<link rel="stylesheet" type="text/css" href="/assets/fonts/feather/style.min.css">
 
 
 @show
@@ -132,8 +131,6 @@
             font-size: 18px;
         }
     </style>
-    <script src="/global/vendor/footable/footable.min.js"></script>
-    <script src="/assets/examples/js/dashboard/analytics.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="/assets/js/qrcode.js"></script>
 
