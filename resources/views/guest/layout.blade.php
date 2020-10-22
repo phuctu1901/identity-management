@@ -5,10 +5,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Agency - Start Bootstrap Theme</title>
-        <link rel="icon" type="image/x-icon" href="/guest-assets/assets/img/favicon.ico" />
+        <title>Định danh tự chủ - uID - Thử nghiệm</title>
+
+        <meta name="title" content="Định danh tự chủ - uID - Thử nghiệm">
+        <meta name="description" content="Hệ thống cấp định danh tự chủ ứng dụng công nghệ blockchain - uID">
+
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://quanlydinhdan.191lab.tech/thu-nghiem">
+        <meta property="og:title" content="Định danh tự chủ - uID - Thử nghiệm">
+        <meta property="og:description" content="Hệ thống cấp định danh tự chủ ứng dụng công nghệ blockchain - uID">
+        <meta property="og:image" content="/guest-assets/assets/img/tungong.png">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://langthangtour.com/">
+        <meta property="twitter:title" content="Định danh tự chủ - uID - Thử nghiệm">
+        <meta property="twitter:description" content="Hệ thống cấp định danh tự chủ ứng dụng công nghệ blockchain - uID">
+        <meta property="twitter:image" content="/guest-assets/assets/img/tungong.png">
+        <link rel="icon" type="image/x-icon" href="/guest-assets/assets/img/tungong.ico" />
         <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+{{--        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>--}}
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
@@ -24,18 +44,18 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="/guest-assets/assets/img/navbar-logo.svg" alt="" /></a>
+                <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="/guest-assets/assets/img/tungong.png" alt="" style="min-width: auto;min-height: 80px;" /></a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
-                    <i class="fas fa-bars ml-1"></i>
+                    <i class="fa fa-bars ml-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ml-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Team</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Hướng dẫn</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#issue">Cấp định danh</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Giới thiệu</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Nhóm</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Liên hệ</a></li>
                     </ul>
                 </div>
             </div>
@@ -43,48 +63,48 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading">Welcome To Our Studio!</div>
-                <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+                <div class="masthead-subheading">Ứng dụng cấp định danh số - uID</div>
+                <div class="masthead-heading text-uppercase">Đem quyền riêng tư về trong tay bạn</div>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Hướng dẫn</a>
             </div>
         </header>
         <!-- Services-->
         <section class="page-section" id="services">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Services</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading text-uppercase">Hướng dẫn</h2>
+                    <h3 class="section-subheading text-muted">Trải nghiệm nhanh chóng ứng dụng quản lý định danh mở - uID</h3>
                 </div>
                 <div class="row text-center">
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fa fa-mobile fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">E-Commerce</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        <h4 class="my-3">Ứng dụng di động</h4>
+                        <p class="text-muted">Tiến hành tải ứng dụng cho Android và iOS.</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Responsive Design</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        <h4 class="my-3">Thực hiện điền thông tin</h4>
+                        <p class="text-muted">Tiến hành nhập thông tin vào mẫu ở dưới và thực hiện theo hướng dẫn</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fa fa-hand-grab-o fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Web Security</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        <h4 class="my-3">Tận hưởng tiện ích</h4>
+                        <p class="text-muted">Truy cập các ứng dụng trong hệ sinh thái uID và sử dụng định danh tự chủ vừa được cấp.</p>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Portfolio Grid-->
-        <section class="page-section bg-light" id="portfolio">
+        <section class="page-section bg-light" id="issue">
             @section('body-content')
             @show
 
@@ -156,43 +176,43 @@
         <section class="page-section bg-light" id="team">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading text-uppercase">Thành viên dự án</h2>
+                    <h3 class="section-subheading text-muted">Danh sách cách thành viên dự án</h3>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="/guest-assets/assets/img/team/1.jpg" alt="" />
-                            <h4>Kay Garland</h4>
-                            <p class="text-muted">Lead Designer</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-6">
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="/guest-assets/assets/img/team/2.jpg" alt="" />
-                            <h4>Larry Parker</h4>
-                            <p class="text-muted">Lead Marketer</p>
+                            <h4>TS. Nguyễn Việt Hùng</h4>
+                            <p class="text-muted">Người hướng dẫn</p>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-6">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="/guest-assets/assets/img/team/3.jpg" alt="" />
-                            <h4>Diana Petersen</h4>
-                            <p class="text-muted">Lead Developer</p>
+                            <img class="mx-auto rounded-circle" src="/guest-assets/assets/img/team/1.jpg" alt="" />
+                            <h4>Nguyễn Phúc Tú</h4>
+                            <p class="text-muted">Người thực hiện</p>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
+{{--                    <div class="col-lg-4">--}}
+{{--                        <div class="team-member">--}}
+{{--                            <img class="mx-auto rounded-circle" src="/guest-assets/assets/img/team/3.jpg" alt="" />--}}
+{{--                            <h4>Diana Petersen</h4>--}}
+{{--                            <p class="text-muted">Lead Developer</p>--}}
+{{--                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>--}}
+{{--                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>--}}
+{{--                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
                 </div>
                 <div class="row">
-                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
+                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Chân thành cảm ơn sự giúp đỡ của cộng đồng Blockchain Việt Nam, Hyperledger Indy, Thịnh NND và nhiều bạn bè, thầy cô giáo khác.</p></div>
                 </div>
             </div>
         </section>
@@ -201,16 +221,16 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid d-block mx-auto" src="/guest-assets/assets/img/logos/envato.jpg" alt="" /></a>
+                        <a href="#!"><img class="img-fluid d-block mx-auto" src="/guest-assets/assets/img/logos/sorvin-logo.png" alt="" style="max-height: 60px;" /></a>
                     </div>
                     <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid d-block mx-auto" src="/guest-assets/assets/img/logos/designmodo.jpg" alt="" /></a>
+                        <a href="#!"><img class="img-fluid d-block mx-auto" src="/guest-assets/assets/img/logos/indy-logo.png" alt="" style="max-height: 60px;" /></a>
                     </div>
                     <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid d-block mx-auto" src="/guest-assets/assets/img/logos/themeforest.jpg" alt="" /></a>
+                        <a href="#!"><img class="img-fluid d-block mx-auto" src="/guest-assets/assets/img/logos/trinsic-logo.png" alt="" style="max-height: 60px;"/></a>
                     </div>
                     <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid d-block mx-auto" src="/guest-assets/assets/img/logos/creative-market.jpg" alt="" /></a>
+                        <a href="#!"><img class="img-fluid d-block mx-auto" src="/guest-assets/assets/img/logos/fit-mta-logo.png" alt="" style="max-height: 60px;"/></a>
                     </div>
                 </div>
             </div>
@@ -219,35 +239,35 @@
         <section class="page-section" id="contact">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Contact Us</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading text-uppercase">Liên hệ với chúng tôi</h2>
+                    <h3 class="section-subheading text-muted">Để lại lời nhắn, chúng tôi sẽ phản hồi sớm nhất có thể.</h3>
                 </div>
                 <form id="contactForm" name="sentMessage" novalidate="novalidate">
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input class="form-control" id="name" type="text" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name." />
+                                <input class="form-control" id="name" type="text" placeholder="Tên bạn *" required="required" data-validation-required-message="Please enter your name." />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" id="email" type="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address." />
+                                <input class="form-control" id="email" type="email" placeholder="Địa chỉ email *" required="required" data-validation-required-message="Please enter your email address." />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group mb-md-0">
-                                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number." />
+                                <input class="form-control" id="phone" type="tel" placeholder="Số điện thoại *" required="required" data-validation-required-message="Please enter your phone number." />
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group form-group-textarea mb-md-0">
-                                <textarea class="form-control" id="message" placeholder="Your Message *" required="required" data-validation-required-message="Please enter a message."></textarea>
+                                <textarea class="form-control" id="message" placeholder="Tin nhắn *" required="required" data-validation-required-message="Please enter a message."></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                     </div>
                     <div class="text-center">
                         <div id="success"></div>
-                        <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Send Message</button>
+                        <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Gởi tin nhắn</button>
                     </div>
                 </form>
             </div>
@@ -256,15 +276,14 @@
         <footer class="footer py-4">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-left">Copyright © Your Website 2020</div>
+                    <div class="col-lg-4 text-lg-left">Copyright © Tú Ngọng 2020</div>
                     <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fa fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fa fa-github"></i></a>
                     </div>
                     <div class="col-lg-4 text-lg-right">
-                        <a class="mr-3" href="#!">Privacy Policy</a>
-                        <a href="#!">Terms of Use</a>
+                        <a class="mr-3" href="#!">Chính sách quyền riêng tư</a>
+                        <a href="#!">Điều khoản sử dụng</a>
                     </div>
                 </div>
             </div>
@@ -290,7 +309,7 @@
                                         <li>Category: Illustration</li>
                                     </ul>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                        <i class="fas fa-times mr-1"></i>
+                                        <i class="fa fa-times mr-1"></i>
                                         Close Project
                                     </button>
                                 </div>
@@ -320,7 +339,7 @@
                                         <li>Category: Graphic Design</li>
                                     </ul>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                        <i class="fas fa-times mr-1"></i>
+                                        <i class="fa fa-times mr-1"></i>
                                         Close Project
                                     </button>
                                 </div>
@@ -350,7 +369,7 @@
                                         <li>Category: Identity</li>
                                     </ul>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                        <i class="fas fa-times mr-1"></i>
+                                        <i class="fa fa-times mr-1"></i>
                                         Close Project
                                     </button>
                                 </div>
@@ -380,7 +399,7 @@
                                         <li>Category: Branding</li>
                                     </ul>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                        <i class="fas fa-times mr-1"></i>
+                                        <i class="fa fa-times mr-1"></i>
                                         Close Project
                                     </button>
                                 </div>
@@ -410,7 +429,7 @@
                                         <li>Category: Website Design</li>
                                     </ul>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                        <i class="fas fa-times mr-1"></i>
+                                        <i class="fa fa-times mr-1"></i>
                                         Close Project
                                     </button>
                                 </div>
@@ -440,7 +459,7 @@
                                         <li>Category: Photography</li>
                                     </ul>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
-                                        <i class="fas fa-times mr-1"></i>
+                                        <i class="fa fa-times mr-1"></i>
                                         Close Project
                                     </button>
                                 </div>
@@ -474,6 +493,11 @@
             }
             .container{
                 max-width: 80%;
+            }
+
+            .form-control:focus {
+                border-color: #3e8ef7;
+                box-shadow: inset 0 1px 1px #3e8ef7, 0 0 8px #3e8ef7;
             }
         </style>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
