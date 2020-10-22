@@ -24,11 +24,7 @@ class GuestController extends Controller
         $dob = $request->input( 'dob' );
         $address = $request->input( 'address' );
 
-        if ($data->gender==1){
-            $str_gender='Nam';
-        }else {
-            $str_gender = 'Nữ';
-        }
+
 
         $json_string = '{
                   "auto_issue": true,
@@ -37,22 +33,22 @@ class GuestController extends Controller
                     "attributes": [
                       {
                         "name": "name",
-                        "value":"'.$data->fullname.'"
+                        "value":"'.$name.'"
                       },
                 {
                         "name": "gender",
-                        "value": "'.$str_gender.'"
+                        "value": "'.$gender.'"
                       },
                 {
                         "name": "dob",
-                        "value": "'.$data->dob.'"
+                        "value": "'.$dob.'"
                       },
                 {
                         "name": "address",
-                        "value": "'.$data->address.'"
+                        "value": "'.$address.'"
                       },{
                         "name": "id",
-                        "value": "'.$data->code.'"
+                        "value": "'.$code.'"
                       }
                     ]
                   },
@@ -78,7 +74,7 @@ class GuestController extends Controller
             "cred_ex_id"=>$data_response->credential_exchange_id,
             "their_did"=>$data_response->thread_id
         ];
-        $this->createDidRecord($data_array);
+//        $this->createDidRecord($data_array);
 //        dd($data_response);
 
 

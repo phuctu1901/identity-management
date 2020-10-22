@@ -81,6 +81,7 @@
 @endsection
 @section('script')
     <script>
+        var connection_Id = '';
         $("#btn-submit").click(function(event){
             event.preventDefault();
             toastr.info('Đang lấy thông tin')
@@ -108,7 +109,7 @@
                         colorLight : "#ffffff",
                         correctLevel : QRCode.CorrectLevel.L
                     });
-                    $("#connection_check").data('button-data', {connectionId:connectionId})
+                    connection_Id = connectionId;
 
                     // $("#connection_check").prop("disabled", false);
                     console.log("khoi tao lang nghe su kien tao ket noi");
@@ -167,8 +168,6 @@
                 {
                     toastr.success('Lấy thông tin thành công')
                     console.log(data)
-                    $("#check_credential").data('button-data', {cred_ex_id: data.data.credential_exchange_id})
-                    $("#check_credential").prop("disabled", false);
 
                 },
                 error: function (err) {
@@ -184,7 +183,7 @@
             $('#logs-area').append(`<div class="alert alert-info" role="alert">
                                        2. Người dùng đã kết nối
                                     </div>`);
-            var connectionId = $("#connection_check").data('button-data').connectionId
+            var connectionId = connection_Id;
             var code = $("#input_code").val()
             var name = $("#input_fullname").val()
             var gender = document.querySelector('input[name="gender"]:checked').value;
