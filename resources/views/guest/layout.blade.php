@@ -28,6 +28,7 @@
         <!-- Font Awesome icons (free version)-->
 {{--        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>--}}
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.6/css/boxicons.min.css' rel='stylesheet'>
 
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
@@ -69,8 +70,9 @@
             </div>
         </header>
         <!-- Services-->
-        <section class="page-section" id="services">
-            <div class="container">
+        <section class="page-section bg-light" id="services">
+
+        <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Hướng dẫn</h2>
                     <h3 class="section-subheading text-muted">Trải nghiệm nhanh chóng ứng dụng quản lý định danh mở - uID</h3>
@@ -104,6 +106,31 @@
             </div>
         </section>
         <!-- Portfolio Grid-->
+        <section class="" id="mobile_app">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 d-lg-flex flex-lg-column justify-content-center align-items-stretch pt-5 pt-lg-0 order-2 order-lg-1" data-aos="fade-up">
+                        <div>
+                            <div   class="form-group" style="margin-bottom: 30px;">
+                                <h2 class="section-heading">Ứng dụng Trinsic: Ứng dụng ví quản lý định danh số </h2>
+                            </div>
+
+                            <h3 class="section-subheading text-muted" style="font-size:1.5rem;"> Lưu trữ tất cả chứng nhận, chứng chỉ và giấy phép của bạn. Bạn hoàn toàn sở hữu và cấp phép cho việc truy cập như một ví đựng giấy tờ thông thường trong túi bạn.</h3>
+                            <div class="form-group" style="margin-top:30px;">
+                                <a href="https://play.google.com/store/apps/details?id=id.streetcred.apps.mobile" class="download-btn"><i class="bx bxl-play-store"></i> Google Play</a>
+                                <a href="https://apps.apple.com/us/app/streetcred-identity-agent/id1475160728" class="download-btn"><i class="bx bxl-apple"></i> App Store</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-lg-flex flex-lg-column align-items-stretch order-1 order-lg-2 mobile_app-img" data-aos="fade-up">
+                        <img src="/guest-assets/assets/img/portfolio/trinsic-banner.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
         <section class="page-section bg-light" id="issue">
             @section('body-content')
             @show
@@ -114,58 +141,58 @@
         <section class="page-section" id="about">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">About</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading text-uppercase">Giới thiệu</h2>
+                    <h3 class="section-subheading text-muted">Quá trình tôi tìm đến với blockchain và sự ra đời của sản phẩm này</h3>
                 </div>
                 <ul class="timeline">
                     <li>
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="/guest-assets/assets/img/about/1.jpg" alt="" /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>2009-2011</h4>
-                                <h4 class="subheading">Our Humble Beginnings</h4>
+                                <h4>5/2018</h4>
+                                <h4 class="subheading">Tìm hiểu blockchain</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                            <div class="timeline-body"><p class="text-muted">Tháng 5/2018 tôi được biết đến blockchain và thử nghiệm sử dụng Ethereum theo hướng dẫn của thầy giáo trong khoa.</p></div>
                         </div>
                     </li>
                     <li class="timeline-inverted">
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="/guest-assets/assets/img/about/2.jpg" alt="" /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>March 2011</h4>
-                                <h4 class="subheading">An Agency is Born</h4>
+                                <h4>8/2018</h4>
+                                <h4 class="subheading">Sản phẩm đầu tiên</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                            <div class="timeline-body"><p class="text-muted">Xây dựng giải pháp lưu trữ lịch sử thu phí cho trạm thu phí BOT lên blockchain, tham gia cuộc thi VJC Hackathon 2018 và có giải 3</p></div>
                         </div>
                     </li>
                     <li>
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="/guest-assets/assets/img/about/3.jpg" alt="" /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>December 2012</h4>
-                                <h4 class="subheading">Transition to Full Service</h4>
+                                <h4>10/2018-nay</h4>
+                                <h4 class="subheading">Bén duyên với Hyperledger</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                            <div class="timeline-body"><p class="text-muted">Sử dụng Hyperledger Fabric để xây dựng sản phẩm tham gia nghiên cứu khoa học ở trường, được giấy khen</p></div>
                         </div>
                     </li>
                     <li class="timeline-inverted">
                         <div class="timeline-image"><img class="rounded-circle img-fluid" src="/guest-assets/assets/img/about/4.jpg" alt="" /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>July 2014</h4>
-                                <h4 class="subheading">Phase Two Expansion</h4>
+                                <h4>2/2020</h4>
+                                <h4 class="subheading">Tìm hiểu về định danh tự chủ</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+                            <div class="timeline-body"><p class="text-muted">Biết về định danh tự chủ, thử nghiệm một số giải pháp như uPort và quyết định chọn Sorvin để phát triển thành đồ án</p></div>
                         </div>
                     </li>
                     <li class="timeline-inverted">
                         <div class="timeline-image">
                             <h4>
-                                Be Part
+                                Tiếp tục
                                 <br />
-                                Of Our
+                                phát triển
                                 <br />
-                                Story!
+                                và hoàn thiện
                             </h4>
                         </div>
                     </li>
@@ -182,12 +209,11 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="/guest-assets/assets/img/team/2.jpg" alt="" />
+                            <img class="mx-auto rounded-circle" src="/guest-assets/assets/img/logos/fit-mta-logo.png" alt="" />
                             <h4>TS. Nguyễn Việt Hùng</h4>
                             <p class="text-muted">Người hướng dẫn</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fa fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fa fa-facebook-f"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -195,9 +221,8 @@
                             <img class="mx-auto rounded-circle" src="/guest-assets/assets/img/team/1.jpg" alt="" />
                             <h4>Nguyễn Phúc Tú</h4>
                             <p class="text-muted">Người thực hiện</p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fa fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fa fa-facebook-f"></i></a>
                         </div>
                     </div>
 {{--                    <div class="col-lg-4">--}}
@@ -205,14 +230,14 @@
 {{--                            <img class="mx-auto rounded-circle" src="/guest-assets/assets/img/team/3.jpg" alt="" />--}}
 {{--                            <h4>Diana Petersen</h4>--}}
 {{--                            <p class="text-muted">Lead Developer</p>--}}
-{{--                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>--}}
-{{--                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>--}}
-{{--                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>--}}
+{{--                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fa fa-twitter"></i></a>--}}
+{{--                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fa fa-facebook-f"></i></a>--}}
+{{--                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fa fa-linkedin-in"></i></a>--}}
 {{--                        </div>--}}
 {{--                    </div>--}}
                 </div>
                 <div class="row">
-                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Chân thành cảm ơn sự giúp đỡ của cộng đồng Blockchain Việt Nam, Hyperledger Indy, Thịnh NND và nhiều bạn bè, thầy cô giáo khác.</p></div>
+                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted " style="font-size: 2rem;">Chân thành cảm ơn sự  góp ý và giúp đỡ của cộng đồng <a href="">Vietnam Blockchain Developer</a>,  Hyperledger Indy, Thịnh NND và nhiều bạn bè, thầy cô giáo khác trong suốt quá trình học tập và tìm hiểu về blockchain.</p></div>
                 </div>
             </div>
         </section>
@@ -498,6 +523,34 @@
             .form-control:focus {
                 border-color: #3e8ef7;
                 box-shadow: inset 0 1px 1px #3e8ef7, 0 0 8px #3e8ef7;
+            }
+
+            #mobile_app .download-btn {
+                font-family: "Raleway", sans-serif;
+                font-weight: 500;
+                font-size: 15px;
+                display: inline-block;
+                padding: 8px 24px 10px 46px;
+                border-radius: 3px;
+                transition: 0.5s;
+                color: #fff;
+                background: #47536e;
+                position: relative;
+            }
+
+            #mobile_app .download-btn:hover {
+                background: #5777ba;
+            }
+
+            #mobile_app .download-btn i {
+                font-size: 20px;
+                position: absolute;
+                left: 18px;
+                top: 8.5px;
+            }
+
+            #mobile_app .download-btn + .download-btn {
+                margin-left: 20px;
             }
         </style>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>

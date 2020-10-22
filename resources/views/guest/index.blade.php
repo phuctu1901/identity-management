@@ -4,7 +4,7 @@
 <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Thông tin định danh</h2>
-                    <h3 class="section-subheading text-muted">Cung cấp thông tin định danh bạn cần nhận</h3>
+                    <h3 class="section-subheading text-muted">Điền thông tin định danh bạn mong muốn (Không cần là dữ liệu thật)</h3>
                 </div>
     <div class="col-12">
         <div  class="card card-shadow card-md" style="margin-top: 30px;">
@@ -146,6 +146,8 @@
                             swal('Thành công', 'Người dùng đã lưu chứng chỉ số','success')
                             $('#logs-area').append(`<div class="alert alert-success" role="alert">
                                        5. Đã cấp định danh             </div>`);
+                            swal('Định danh của bạn đã được cấp thành công', '','success')
+
                         })
 
                 },
