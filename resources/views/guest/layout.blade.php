@@ -40,8 +40,11 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.css">
-        <link href="/guest-assets/css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
         <!-- Latest compiled and minified JavaScript -->
+        <!-- Latest compiled and minified JavaScript -->
+
+        <link href="/guest-assets/css/styles.css" rel="stylesheet" />
         <!-- Latest compiled and minified CSS -->
     </head>
     <body id="page-top">
@@ -67,8 +70,8 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading">Ứng dụng cấp định danh số - uID</div>
-                <div class="masthead-heading text-uppercase">Đem quyền riêng tư về trong tay bạn</div>
+                <div class="masthead-subheading">Ứng dụng quản lý cấp định danh số - uID</div>
+                <div class="masthead-heading text-uppercase">Đem quyền riêng tư về lại tay bạn</div>
                 <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Hướng dẫn</a>
             </div>
         </header>
@@ -561,7 +564,36 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.js"></script>
         <script src="{{ asset('/js/app.js') }}"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
         <!-- Core theme JS-->
+    <script>
+        jQuery(function ($)
+        {
+            $.datepicker.regional["vi-VN"] =
+                {
+                    closeText: "Đóng",
+                    prevText: "Trước",
+                    nextText: "Sau",
+                    currentText: "Hôm nay",
+                    monthNames: ["Tháng một", "Tháng hai", "Tháng ba", "Tháng tư", "Tháng năm", "Tháng sáu", "Tháng bảy", "Tháng tám", "Tháng chín", "Tháng mười", "Tháng mười một", "Tháng mười hai"],
+                    monthNamesShort: ["Một", "Hai", "Ba", "Bốn", "Năm", "Sáu", "Bảy", "Tám", "Chín", "Mười", "Mười một", "Mười hai"],
+                    dayNames: ["Chủ nhật", "Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy"],
+                    dayNamesShort: ["CN", "Hai", "Ba", "Tư", "Năm", "Sáu", "Bảy"],
+                    dayNamesMin: ["CN", "T2", "T3", "T4", "T5", "T6", "T7"],
+                    weekHeader: "Tuần",
+                    dateFormat: "dd/mm/yy",
+                    yearRange: '1930:2020',
+                    firstDay: 1,
+                    isRTL: false,
+                    changeYear: true,
+                    showMonthAfterYear: false,
+                    yearSuffix: ""
+                };
+
+            $.datepicker.setDefaults($.datepicker.regional["vi-VN"]);
+        });
+    </script>
+
         <script src="/guest-assets/js/scripts.js"></script>
     @section('script')
     @show
