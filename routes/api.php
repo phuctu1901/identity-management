@@ -39,3 +39,7 @@ Route::get('/did/request_received/{id}', 'API\DID\AddController@receivedRequest'
 Route::get('/did/offer_sent/{id}', 'API\DID\AddController@sentOffer');
 
 
+Route::post('/credential/issueforguest', 'GuestController@issueCredential');
+
+
+

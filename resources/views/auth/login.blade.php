@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Đăng nhập hệ thống quản lý điều hành - Linh Ứng Travel</title>
+    <title>Đăng nhập | Hệ thống quản lý định danh số uID</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
     <link rel="icon" type="image/png" href="/login-assets/images/icons/favicon.ico"/>
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css"  src="/login-assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" src="/login-assets/vendor/bootstrap/css/bootstrap.min.css">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="/login-assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="/login-assets/fonts/iconic/css/material-design-iconic-font.min.css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css"  src="/login-assets/vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" src="/login-assets/vendor/animate/animate.css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css"  src="/login-assets/vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" src="/login-assets/vendor/css-hamburgers/hamburgers.min.css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css"  src="/login-assets/vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" src="/login-assets/vendor/animsition/css/animsition.min.css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css"  src="/login-assets/vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" src="/login-assets/vendor/select2/select2.min.css">
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css"  src="/login-assets/vendor/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" src="/login-assets/vendor/daterangepicker/daterangepicker.css">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="/login-assets/css/util.css">
     <link rel="stylesheet" type="text/css" href="/login-assets/css/main.css">
@@ -67,20 +67,19 @@
                     </button>
                 </div>
             @endif
-            <form role="form" class="login100-form validate-form"  action="{{ route('login') }}" method="POST">
+            <form role="form" class="login100-form validate-form" action="{{ route('login') }}" method="POST">
                 {!! csrf_field() !!}
 
-                <span class="login100-form-logo">
-						            <img class="navbar-brand-logo" src="/assets/images/Hanoi_Logo.png" title="Hệ thống Quản lý định danh Thành phố Hà Nội">
+                <div class="login100-form-logo"><img src="/assets/images/Hanoi_Logo.png" width="60%" height="65%"></div>
 
-					</span>
 
                 <span class="login100-form-title p-b-34 p-t-27" tyle="font-size:25px; font-family: unset;">
                        HỆ THỐNG CẤP ĐỊNH DANH SỐ
 					</span>
 
                 <div class="wrap-input100 validate-input">
-                    <input class="input100" id="email" type="email" name="email" placeholder="Email" value="{{ old('username') ?: old('email') }}" required autofocus>
+                    <input class="input100" id="email" type="email" name="email" placeholder="Email"
+                           value="{{ old('username') ?: old('email') }}" required autofocus>
 
                     <span class="focus-input100" data-placeholder="&#xf207;"></span>
                     <div class="form-group row">
@@ -108,7 +107,8 @@
                 </div>
 
                 <div class="contact100-form-checkbox">
-                    <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember"  id="remember" {{ old('remember') ? 'checked' : '' }}>
+                    <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember"
+                           id="remember" {{ old('remember') ? 'checked' : '' }}>
                     <label class="label-checkbox100" for="ckb1">
                         Ghi nhớ đăng nhập
                     </label>
@@ -128,22 +128,21 @@
 <div id="dropDownSelect1"></div>
 
 <!--===============================================================================================-->
-<script   src="/login-assets/vendor/jquery/jquery-3.2.1.min.js"></script>
+<script src="/login-assets/vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
-<script   src="/login-assets/vendor/animsition/js/animsition.min.js"></script>
+<script src="/login-assets/vendor/animsition/js/animsition.min.js"></script>
 <!--===============================================================================================-->
-<script   src="/login-assets/vendor/bootstrap/js/popper.js"></script>
-<script   src="/login-assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="/login-assets/vendor/bootstrap/js/popper.js"></script>
+<script src="/login-assets/vendor/bootstrap/js/bootstrap.min.js"></script>
 <!--===============================================================================================-->
-<script   src="/login-assets/vendor/select2/select2.min.js"></script>
+<script src="/login-assets/vendor/select2/select2.min.js"></script>
 <!--===============================================================================================-->
-<script   src="/login-assets/vendor/daterangepicker/moment.min.js"></script>
-<script   src="/login-assets/vendor/daterangepicker/daterangepicker.js"></script>
+<script src="/login-assets/vendor/daterangepicker/moment.min.js"></script>
+<script src="/login-assets/vendor/daterangepicker/daterangepicker.js"></script>
 <!--===============================================================================================-->
-<script   src="/login-assets/vendor/countdowntime/countdowntime.js"></script>
+<script src="/login-assets/vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
 <script src="/login-assets/js/main.js"></script>
 
 </body>
 </html>
-

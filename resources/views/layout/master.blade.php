@@ -18,7 +18,9 @@
     <link rel="stylesheet" href="/global/css/bootstrap-extend.min.css">
 {{--    <link rel="stylesheet" href="/assets/css/site.min.css">--}}
 
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.css">
+    <link rel="stylesheet" type="text/css" href="/assets/fonts/feather/style.min.css">
 
     <!-- Plugins -->
     <link rel="stylesheet" href="/global/vendor/animsition/animsition.css">
