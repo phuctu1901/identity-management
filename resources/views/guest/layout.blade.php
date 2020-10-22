@@ -240,7 +240,7 @@
 {{--                    </div>--}}
                 </div>
                 <div class="row">
-                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted " style="font-size: 2rem;">Chân thành cảm ơn sự  góp ý và giúp đỡ của cộng đồng <a href="">Vietnam Blockchain Developer</a>,  Hyperledger Indy, Thịnh NND và nhiều bạn bè, thầy cô giáo khác trong suốt quá trình học tập và tìm hiểu về blockchain.</p></div>
+                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted " style="font-size: 2rem;">Chân thành cảm ơn sự  góp ý và giúp đỡ của cộng đồng <a href="https://facebook.com/groups/1561844270543595/">Vietnam Blockchain Developers</a>,  Hyperledger Indy, Sorvin và nhiều bạn bè, thầy cô giáo khác trong suốt quá trình học tập và tìm hiểu về blockchain.</p></div>
                 </div>
             </div>
         </section>
