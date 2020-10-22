@@ -37,6 +37,9 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link rel="stylesheet" href="/global/css/bootstrap.min.css">
         <link rel="stylesheet" href="/global/css/bootstrap-extend.min.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.css">
         <link href="/guest-assets/css/styles.css" rel="stylesheet" />
         <!-- Latest compiled and minified JavaScript -->
         <!-- Latest compiled and minified CSS -->

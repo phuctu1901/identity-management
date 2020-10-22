@@ -112,7 +112,6 @@
                     connection_Id = connectionId;
 
                     // $("#connection_check").prop("disabled", false);
-                    console.log("khoi tao lang nghe su kien tao ket noi");
 
                     // Echo.channel('quanlydinhdanh_channel_add_did_'+connectionId)
                     //     .listen('.App\\Events\\DID\\ConnectionCreatedEvent', e => {
@@ -146,7 +145,6 @@
                             swal('Thành công', 'Người dùng đã lưu chứng chỉ số','success')
                             $('#logs-area').append(`<div class="alert alert-success" role="alert">
                                        5. Đã cấp định danh             </div>`);
-                            swal('Định danh của bạn đã được cấp thành công', '','success')
 
                         })
 
