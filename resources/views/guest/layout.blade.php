@@ -10,6 +10,7 @@
         <meta name="title" content="Định danh tự chủ - uID - Thử nghiệm">
         <meta name="description" content="Hệ thống cấp định danh tự chủ ứng dụng công nghệ blockchain - uID">
 
+        <meta name="csrf-token" content="{{ csrf_token() }}" />
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website">
@@ -273,32 +274,32 @@
                     <h2 class="section-heading text-uppercase">Liên hệ với chúng tôi</h2>
                     <h3 class="section-subheading text-muted">Để lại lời nhắn, chúng tôi sẽ phản hồi sớm nhất có thể.</h3>
                 </div>
-                <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                <form id="contactForm" name="sentMessage" novalidate="novalidate" >
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input class="form-control" id="name" type="text" placeholder="Tên bạn *" required="required" data-validation-required-message="Please enter your name." />
+                                <input class="form-control" id="name" type="text" placeholder="Tên bạn *" required="required" data-validation-required-message="Vui lòng điền tên của bạn." name="contact_name" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" id="email" type="email" placeholder="Địa chỉ email *" required="required" data-validation-required-message="Please enter your email address." />
+                                <input class="form-control" id="email" type="email" placeholder="Địa chỉ email *" required="required" data-validation-required-message="Vui lòng điền địa chỉ email ."  name="contact_email" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group mb-md-0">
-                                <input class="form-control" id="phone" type="tel" placeholder="Số điện thoại *" required="required" data-validation-required-message="Please enter your phone number." />
+                                <input class="form-control" id="phone" type="tel" placeholder="Số điện thoại *" required="required" data-validation-required-message="Vui lòng điền số điện thoại ." name="contact_phone"/>
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group form-group-textarea mb-md-0">
-                                <textarea class="form-control" id="message" placeholder="Tin nhắn *" required="required" data-validation-required-message="Please enter a message."></textarea>
+                                <textarea class="form-control" id="message" placeholder="Tin nhắn *" required="required" data-validation-required-message="Vui lòng để lại lời nhắn." name="contact_content"></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                     </div>
                     <div class="text-center">
                         <div id="success"></div>
-                        <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Gởi tin nhắn</button>
+                        <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Gởi thông tin</button>
                     </div>
                 </form>
             </div>
@@ -508,6 +509,13 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <!-- Contact form JS-->
         <script src="/guest-assets/assets/mail/jqBootstrapValidation.js"></script>
+<script>
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+</script>
         <script src="/guest-assets/assets/mail/contact_me.js"></script>
 
         <style>

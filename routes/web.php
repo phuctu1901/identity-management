@@ -19,6 +19,11 @@ Route::get('/thu-nghiem','GuestController@index');
 //
 //Route::get('/home', 'HomeController@index')->name('home');
 
+// Post form data
+Route::post('/thu-nghiem/lien-he', [
+    'uses' => 'ContactUsFormController@ContactUsForm',
+    'as' => 'contact.store'
+]);
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/role','RoleController@index');
     Route::get('/role/add','RoleController@add');
