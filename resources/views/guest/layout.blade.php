@@ -550,6 +550,8 @@
                 color: #fff;
                 background: #47536e;
                 position: relative;
+                width: 180px;
+                margin-top: 5px;
             }
 
             #mobile_app .download-btn:hover {
@@ -563,9 +565,7 @@
                 top: 8.5px;
             }
 
-            #mobile_app .download-btn + .download-btn {
-                margin-left: 20px;
-            }
+
         </style>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
         <script src="/assets/js/qrcode.js"></script>
