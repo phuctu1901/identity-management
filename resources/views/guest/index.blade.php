@@ -29,7 +29,7 @@
                                 <div class="col-md-9">
                                     <div class="radio-custom radio-default radio-inline">
                                         <input type="radio"  name="gender" id="male" value="Nam" checked/>
-                                        <label for="inputHorizontalMale">Name</label>
+                                        <label for="inputHorizontalMale">Nam</label>
                                         <input type="radio" name="gender" id="female" value="Nữ"/>
                                         <label for="inputHorizontalFemale">Nữ</label>
                                     </div>
